@@ -53,7 +53,14 @@ class TasksController extends Controller
 	
 		$id->update($request->all());
 		//$task->fill($input)->save();
-		return back();
+		return redirect('tasks');
 
 	}
+        public function destroy($id)
+        {
+            $task = Task::findOrFail($id);
+
+            $task->delete();
+            return redirect('tasks');
+        }
 }

@@ -12,8 +12,9 @@
 */
 
 Route::get('/tasks', 'TasksController@index');
-Route::get('/create', 'TasksController@create');
-Route::post('tasks', 'TasksController@store');
+Route::get('create', 'TasksController@create');
+Route::post('save', 'TasksController@store');
 Route::get('tasks/{id}', 'TasksController@show');
-Route::get('tasks/edit/{id}', 'TasksController@edit');
-Route::patch('/tasks/update/{id}', 'TasksController@update');
+Route::get('edit/{id}', 'TasksController@edit');
+Route::patch('update/{id}', 'TasksController@update');
+Route::get('delete/{id}', 'TasksController@destroy');

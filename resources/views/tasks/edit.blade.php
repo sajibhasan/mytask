@@ -18,10 +18,8 @@
 @endif
 
 
-	{!! Form::open(['url' => 'tasks/update/{{$id->id}}' ]) !!}
-
-	{{ method_field('PATCH') }}
-
+       
+       {!! Form::model($id,['method'=>'PATCH','action'=>['TasksController@update',$id->id]]) !!}
 
 	<div class="form-group">
 		{!! Form::label('title', 'Title :',['class' => 'control-label']) !!}
@@ -39,3 +37,5 @@
 	{!! Form::close() !!}
 </div>
 @endsection
+
+

@@ -18,7 +18,7 @@
 					<h3 class="panel-title">Task List</h3>
 				</div>
 				<div class="col col-xs-6 text-right">
-					<a href="{{ url('/tasks/create')}}"><button type="button" class="btn btn-sm btn-primary btn-create">Create New</button></a>
+					<a href="{{ url('/create')}}"><button type="button" class="btn btn-sm btn-primary btn-create">Create New</button></a>
 				</div>
 			</div>
 		</div>
@@ -41,9 +41,9 @@
 						<td><a href="{{ url('/tasks', $task->id) }}">{{ $task->title }}</a></td>
 						<td>{{ $task->description }}</td>
 						<td align="center">
-							<a href="{{ url('/tasks', $task->id) }}" class="btn btn-primary"><em class="fa fa-bars"></em></a>
-							<a href="{{ url('tasks/edit', $task->id) }}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
-							<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+							<a href="{{ url('tasks', $task->id) }}" class="btn btn-primary"><em class="fa fa-bars"></em></a>
+							<a href="{{ url('/edit', $task->id) }}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+							<a href="{{ url('/delete', $task->id) }}" class="btn btn-danger"><em class="fa fa-trash"></em></a>
 						</td>
 					</tr>
 					@endforeach

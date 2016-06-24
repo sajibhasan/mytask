@@ -18,7 +18,7 @@
 @endif
 
 
-	{!! Form::open(['url' => 'tasks']) !!}
+	{!! Form::open(['url' => 'save']) !!}
 
 
 	<div class="form-group">
